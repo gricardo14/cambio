@@ -20,4 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 
-Route::middleware('auth:api','throttle:60,1')->get('tipoDeCambio', 'tipoCambio@getCambio')->name('tipoDeCambio');
+Route::middleware('auth:api','throttle:3,1')->get('tipoDeCambio', 'tipoCambio@getCambio')->name('tipoDeCambio');
